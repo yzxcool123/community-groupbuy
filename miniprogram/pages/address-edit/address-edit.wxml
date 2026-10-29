@@ -1,0 +1,74 @@
+<view class="page">
+  <view class="card">
+    <view class="form-item">
+      <text class="form-label">小区</text>
+      <input
+        class="form-input"
+        placeholder="如：阳光小区"
+        placeholder-class="form-placeholder"
+        value="{{form.community}}"
+        data-field="community"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">楼号</text>
+      <input
+        class="form-input"
+        placeholder="如：3号楼"
+        placeholder-class="form-placeholder"
+        value="{{form.building}}"
+        data-field="building"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">门牌号</text>
+      <input
+        class="form-input"
+        placeholder="如：2单元501"
+        placeholder-class="form-placeholder"
+        value="{{form.room}}"
+        data-field="room"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">收货人</text>
+      <input
+        class="form-input"
+        placeholder="姓名"
+        placeholder-class="form-placeholder"
+        value="{{form.contactName}}"
+        data-field="contactName"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">手机号</text>
+      <input
+        class="form-input"
+        type="number"
+        maxlength="11"
+        placeholder="11 位手机号"
+        placeholder-class="form-placeholder"
+        value="{{form.contactPhone}}"
+        data-field="contactPhone"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">默认地址</text>
+      <switch checked="{{isDefault}}" color="#FF6700" bindchange="onDefaultChange" />
+    </view>
+  </view>
+
+  <view class="tip">地址格式：某某小区 + 楼号 + 门牌号</view>
+
+  <view class="btn btn-danger del-btn" wx:if="{{isEdit}}" bindtap="onRemove">删除地址</view>
+
+  <view class="page-pad-bottom" style="height:140rpx;"></view>
+  <view class="footer-bar footer-bar--show">
+    <view class="btn btn-primary btn-block" bindtap="onSave">保存地址</view>
+  </view>
+</view>

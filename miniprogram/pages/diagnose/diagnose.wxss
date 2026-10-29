@@ -1,0 +1,78 @@
+.page {
+  padding: 20rpx 24rpx 60rpx;
+}
+
+.card {
+  margin-bottom: 20rpx;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #F0F1F3;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.k {
+  font-size: 26rpx;
+  color: #646A73;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+}
+
+.v {
+  font-size: 26rpx;
+  color: #1F2329;
+  text-align: right;
+  word-break: break-all;
+}
+
+.mono {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 24rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+  color: #1F2329;
+}
+
+.title.ok {
+  color: #0F9D58;
+}
+
+.title.err {
+  color: #E34D59;
+}
+
+.block {
+  display: block;
+  word-break: break-all;
+  color: #1F2329;
+}
+
+.hint {
+  margin-top: 12rpx;
+  font-size: 22rpx;
+  color: #8B919B;
+  line-height: 1.6;
+}
+
+.log {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 22rpx;
+  color: #646A73;
+  padding: 6rpx 0;
+  word-break: break-all;
+}
+
+.copy-btn {
+  margin-top: 16rpx;
+}

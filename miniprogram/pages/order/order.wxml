@@ -1,0 +1,81 @@
+<view class="page">
+  <!-- 状态 tab -->
+  <view class="tabs">
+    <view
+      class="tab-item {{activeTab === item.key ? 'active' : ''}}"
+      wx:for="{{tabs}}"
+      wx:key="key"
+      data-key="{{item.key}}"
+      bindtap="onTabTap"
+    >
+      <text>{{item.label}}</text>
+      <view class="tab-line" wx:if="{{activeTab === item.key}}"></view>
+    </view>
+  </view>
+
+  <view class="loading-wrap" wx:if="{{loading}}">
+    <text>加载中…</text>
+  </view>
+
+  <block wx:if="{{!loading}}">
+    <view class="order-card card" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+      <view class="row between o-head">
+        <view class="o-no ellipsis">订单号 {{item.orderNo}}</view>
+        <view class="badge {{item.statusCls}}">{{item.statusText}}</view>
+      </view>
+
+      <view class="o-goods">
+        <view class="og-row" wx:for="{{item.previewItems}}" wx:key="index" wx:for-item="g">
+          <image class="og-cover" src="{{g.cover}}" mode="aspectFill" />
+          <view class="og-info">
+            <view class="og-title ellipsis">{{g.title}}</view>
+            <view class="og-spec">{{g.skuName}}</view>
+          </view>
+          <view class="og-right">
+            <view class="price">
+              <text class="price-symbol">¥</text>
+              <text>{{g.price}}</text>
+            </view>
+            <view class="og-qty">x{{g.qty}}</view>
+          </view>
+        </view>
+        <view class="og-more" wx:if="{{item.moreCount > 0}}">还有 {{item.moreCount}} 件商品</view>
+      </view>
+
+      <view class="row between o-foot">
+        <view class="muted">{{item.createdAt}}</view>
+        <view class="row">
+          <text class="muted">共{{item.items.length}}件 合计 </text>
+          <text class="price">
+            <text class="price-symbol">¥</text>
+            <text style="font-size:32rpx;">{{item.totalText}}</text>
+          </text>
+        </view>
+      </view>
+      <view class="o-pay-tags">
+        <text class="badge {{item.payMode === 'cod' ? 'badge-warning' : 'badge-info'}}">{{item.payModeText}}</text>
+        <text class="badge {{item.paid ? 'badge-primary' : 'badge-muted'}}" style="margin-left:8rpx;">{{item.paidText}}</text>
+        <text class="badge badge-info" style="margin-left:8rpx;" wx:if="{{item.fulfillment === 'delivery'}}">送货</text>
+      </view>
+
+      <view class="o-actions">
+        <block wx:if="{{item.status === 'unpaid'}}">
+          <view class="btn btn-sm btn-outline" data-id="{{item.id}}" catchtap="onCancel">取消订单</view>
+          <view class="btn btn-sm btn-primary" data-id="{{item.id}}" catchtap="onPay">去支付</view>
+        </block>
+        <block wx:elif="{{item.status === 'ready' || item.status === 'paid'}}">
+          <view class="btn btn-sm btn-primary" data-id="{{item.id}}" catchtap="goDetail">查看核销码</view>
+        </block>
+        <block wx:else>
+          <view class="btn btn-sm btn-ghost" data-id="{{item.id}}" catchtap="goDetail">订单详情</view>
+        </block>
+      </view>
+    </view>
+
+    <view class="empty" wx:if="{{!list.length}}">
+      <view class="empty-icon">📋</view>
+      <view class="empty-text">暂无相关订单</view>
+      <view class="btn btn-primary" bindtap="goShopping">去逛逛</view>
+    </view>
+  </block>
+</view>

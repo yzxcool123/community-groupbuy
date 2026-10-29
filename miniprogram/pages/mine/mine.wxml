@@ -1,0 +1,84 @@
+<view class="page">
+  <!-- 用户信息 -->
+  <view class="user-hero">
+    <image class="avatar" wx:if="{{userInfo && userInfo.avatar}}" src="{{userInfo.avatar}}" mode="aspectFill" />
+    <view class="avatar avatar-ph" wx:else>👤</view>
+    <view class="user-info">
+      <view class="nickname" wx:if="{{isLoggedIn}}">{{userInfo.nickname || '微信用户'}}</view>
+      <view class="nickname" wx:else bindtap="onLoginTap">点击登录</view>
+      <view class="user-sub" wx:if="{{isLoggedIn}}">
+        <text class="role-tag" wx:for="{{userInfo.roles}}" wx:key="*this" wx:for-item="r">{{r === 'admin' ? '管理员' : r === 'staff' ? '团长' : '买家'}}</text>
+      </view>
+      <view class="user-sub" wx:else>登录后享受更多服务</view>
+    </view>
+    <view class="logout" wx:if="{{isLoggedIn}}" bindtap="onLoginTap">刷新</view>
+  </view>
+
+  <!-- 订单入口 -->
+  <view class="card order-entry">
+    <view class="row between oe-head">
+      <view class="oe-title">我的订单</view>
+      <view class="oe-all" data-status="" bindtap="goOrders">全部订单 ›</view>
+    </view>
+    <view class="oe-grid">
+      <view
+        class="oe-item"
+        wx:for="{{orderStats}}"
+        wx:key="key"
+        data-status="{{item.key}}"
+        bindtap="goOrders"
+      >
+        <view class="oe-icon">{{item.icon}}</view>
+        <view class="oe-label">{{item.label}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 管理入口（权限门控） -->
+  <view class="card admin-entry" wx:if="{{canAdmin}}">
+    <view class="ae-head">
+      <text class="ae-title">🛠 管理工具</text>
+      <text class="badge badge-primary">{{isStaff ? '工作人员' : '管理权限'}}</text>
+    </view>
+    <view class="ae-grid">
+      <view class="ae-item" bindtap="goAdmin">
+        <view class="ae-icon">📊</view>
+        <view class="ae-label">经营看板</view>
+      </view>
+      <view class="ae-item" bindtap="goAdminProducts">
+        <view class="ae-icon">📦</view>
+        <view class="ae-label">商品管理</view>
+      </view>
+      <view class="ae-item" bindtap="goAdminVerify">
+        <view class="ae-icon">✅</view>
+        <view class="ae-label">核销提货</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 其他菜单 -->
+  <view class="card menu-card">
+    <view class="menu-item" bindtap="goAddress">
+      <text class="m-icon">📍</text>
+      <text class="m-label flex-1">收货地址</text>
+      <text class="m-arrow">›</text>
+    </view>
+    <view class="menu-item" bindtap="goDiagnose">
+      <text class="m-icon">🩺</text>
+      <text class="m-label flex-1">网络诊断</text>
+      <text class="m-arrow">›</text>
+    </view>
+    <view class="menu-item" bindtap="goService">
+      <text class="m-icon">💬</text>
+      <text class="m-label flex-1">联系客服</text>
+      <text class="m-arrow">›</text>
+    </view>
+    <view class="menu-item" bindtap="goAbout">
+      <text class="m-icon">ℹ️</text>
+      <text class="m-label flex-1">关于社区团购</text>
+      <text class="m-arrow">›</text>
+    </view>
+  </view>
+
+  <view class="page-foot">社区团购 · 预售自提 MVP</view>
+</view>

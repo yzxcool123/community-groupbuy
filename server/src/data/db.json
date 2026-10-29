@@ -1,0 +1,1161 @@
+{
+  "users": [
+    {
+      "id": "u_1_mvc2e5uw",
+      "openid": "seed_admin",
+      "username": "admin",
+      "password": "admin123",
+      "nickname": "超级管理员",
+      "avatar": "",
+      "phone": "13800000000",
+      "createdAt": "2026-10-17T07:17:56.648Z"
+    },
+    {
+      "id": "u_2_mvc2e5ux",
+      "openid": "seed_staff",
+      "username": "staff01",
+      "password": "staff123",
+      "nickname": "东区团长·王姐",
+      "avatar": "",
+      "phone": "13800000001",
+      "createdAt": "2026-10-17T07:17:56.649Z"
+    },
+    {
+      "id": "u_3_mvc2e5ux",
+      "openid": "seed_buyer",
+      "username": "buyer01",
+      "password": "buyer123",
+      "nickname": "演示用户",
+      "avatar": "",
+      "phone": "13800000002",
+      "createdAt": "2026-10-17T07:17:56.649Z"
+    },
+    {
+      "id": "u_35_mvc2q5da",
+      "openid": "wx_staffdemo001",
+      "username": null,
+      "password": null,
+      "nickname": "演示团长",
+      "avatar": "",
+      "phone": "",
+      "createdAt": "2026-10-17T07:27:15.886Z"
+    },
+    {
+      "id": "u_36_mvc2q5hp",
+      "openid": "wx_admindemo",
+      "username": null,
+      "password": null,
+      "nickname": "演示管理",
+      "avatar": "",
+      "phone": "",
+      "createdAt": "2026-10-17T07:27:16.045Z"
+    },
+    {
+      "id": "u_37_mvc31y35",
+      "openid": "wx_thecodeisamockone",
+      "username": null,
+      "password": null,
+      "nickname": "微信用户0006",
+      "avatar": "",
+      "phone": "",
+      "createdAt": "2026-10-17T07:36:26.321Z"
+    },
+    {
+      "id": "u_51_mvc3wygo",
+      "openid": "wx_debugstaffxx",
+      "username": null,
+      "password": null,
+      "nickname": "真机调试员",
+      "avatar": "",
+      "phone": "",
+      "createdAt": "2026-10-17T08:00:33.144Z"
+    },
+    {
+      "id": "u_52_mvc3xv20",
+      "openid": "o3fGy7TCm66C3H1xwxz8z8DJz7JU",
+      "username": null,
+      "password": null,
+      "nickname": "微信用户0008",
+      "avatar": "",
+      "phone": "",
+      "createdAt": "2026-10-17T08:01:15.384Z"
+    }
+  ],
+  "roles": [
+    {
+      "code": "buyer",
+      "name": "买家"
+    },
+    {
+      "code": "staff",
+      "name": "团长/店长"
+    },
+    {
+      "code": "admin",
+      "name": "超级管理员"
+    }
+  ],
+  "userRoles": [
+    {
+      "userId": "u_1_mvc2e5uw",
+      "role": "admin"
+    },
+    {
+      "userId": "u_1_mvc2e5uw",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_2_mvc2e5ux",
+      "role": "staff"
+    },
+    {
+      "userId": "u_2_mvc2e5ux",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_3_mvc2e5ux",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_35_mvc2q5da",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_35_mvc2q5da",
+      "role": "staff"
+    },
+    {
+      "userId": "u_36_mvc2q5hp",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_36_mvc2q5hp",
+      "role": "admin"
+    },
+    {
+      "userId": "u_37_mvc31y35",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_37_mvc31y35",
+      "role": "staff"
+    },
+    {
+      "userId": "u_37_mvc31y35",
+      "role": "admin"
+    },
+    {
+      "userId": "u_51_mvc3wygo",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_51_mvc3wygo",
+      "role": "staff"
+    },
+    {
+      "userId": "u_52_mvc3xv20",
+      "role": "buyer"
+    },
+    {
+      "userId": "u_52_mvc3xv20",
+      "role": "admin"
+    }
+  ],
+  "pickupPoints": [
+    {
+      "id": "pp_4_mvc2e5ux",
+      "name": "阳光小区·菜鸟驿站",
+      "address": "阳光小区 3 号楼东侧 1 层",
+      "phone": "0571-88880001",
+      "openTime": "08:30-21:00",
+      "staffIds": [
+        "u_2_mvc2e5ux"
+      ],
+      "status": "on",
+      "createdAt": "2026-10-17T07:17:56.649Z"
+    },
+    {
+      "id": "pp_5_mvc2e5ux",
+      "name": "幸福里社区超市",
+      "address": "幸福里商业街 12 号",
+      "phone": "0571-88880002",
+      "openTime": "09:00-22:00",
+      "staffIds": [],
+      "status": "on",
+      "createdAt": "2026-10-17T07:17:56.649Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_6_mvc2e5ux",
+      "name": "时令水果",
+      "icon": "🍎",
+      "sort": 10,
+      "status": "on"
+    },
+    {
+      "id": "cat_7_mvc2e5ux",
+      "name": "新鲜蔬菜",
+      "icon": "🥬",
+      "sort": 9,
+      "status": "on"
+    },
+    {
+      "id": "cat_8_mvc2e5ux",
+      "name": "肉禽蛋品",
+      "icon": "🥚",
+      "sort": 8,
+      "status": "on"
+    },
+    {
+      "id": "cat_9_mvc2e5ux",
+      "name": "粮油速食",
+      "icon": "🍚",
+      "sort": 7,
+      "status": "on"
+    },
+    {
+      "id": "cat_10_mvc2e5ux",
+      "name": "乳品烘焙",
+      "icon": "🥛",
+      "sort": 6,
+      "status": "on"
+    },
+    {
+      "id": "cat_44_mvc3gl3f",
+      "name": "零食",
+      "icon": "🍪",
+      "sort": 5,
+      "status": "on"
+    },
+    {
+      "id": "cat_45_mvc3gl3f",
+      "name": "饮品",
+      "icon": "🧃",
+      "sort": 4,
+      "status": "on"
+    },
+    {
+      "id": "cat_46_mvc3gl3f",
+      "name": "日用百货",
+      "icon": "🧻",
+      "sort": 3,
+      "status": "on"
+    },
+    {
+      "id": "cat_47_mvc3gl3g",
+      "name": "水果",
+      "icon": "🍎",
+      "sort": 11,
+      "status": "on"
+    },
+    {
+      "id": "cat_48_mvc3gl3g",
+      "name": "蔬菜",
+      "icon": "🥬",
+      "sort": 10,
+      "status": "on"
+    },
+    {
+      "id": "cat_50_mvc3iliu",
+      "name": "烘焙",
+      "icon": "",
+      "sort": 0,
+      "status": "on"
+    }
+  ],
+  "products": [
+    {
+      "id": "p_11_mvc2e5ux",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy1/600/600"
+      ],
+      "detail": "泰国金枕榴莲 3-4斤整果",
+      "categoryId": "cat_6_mvc2e5ux",
+      "status": "on",
+      "saleType": "mixed",
+      "pickupOnly": true,
+      "isHot": true,
+      "sort": 100,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:17:56.649Z",
+      "updatedAt": "2026-10-17T07:41:02.449Z"
+    },
+    {
+      "id": "p_14_mvc2e5ux",
+      "title": "山东烟台红富士苹果 5斤装",
+      "cover": "https://picsum.photos/seed/groupbuy2/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy2/600/600",
+        "https://picsum.photos/seed/groupbuy12/600/600"
+      ],
+      "detail": "山东烟台红富士苹果 5斤装",
+      "categoryId": "cat_6_mvc2e5ux",
+      "status": "off",
+      "saleType": "spot",
+      "pickupOnly": true,
+      "isHot": true,
+      "sort": 90,
+      "activityPrice": 19.9,
+      "createdAt": "2026-10-17T07:17:56.649Z",
+      "updatedAt": "2026-10-19T00:27:52.285Z"
+    },
+    {
+      "id": "p_16_mvc2e5uy",
+      "title": "海南贵妃芒 3斤",
+      "cover": "https://picsum.photos/seed/groupbuy3/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy3/600/600",
+        "https://picsum.photos/seed/groupbuy13/600/600"
+      ],
+      "detail": "海南贵妃芒 3斤",
+      "categoryId": "cat_6_mvc2e5ux",
+      "status": "on",
+      "saleType": "presale",
+      "pickupOnly": true,
+      "isHot": false,
+      "sort": 80,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:17:56.650Z",
+      "updatedAt": "2026-10-17T07:17:56.650Z"
+    },
+    {
+      "id": "p_18_mvc2e5uy",
+      "title": "有机小油菜 400g",
+      "cover": "https://picsum.photos/seed/groupbuy4/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy4/600/600",
+        "https://picsum.photos/seed/groupbuy14/600/600"
+      ],
+      "detail": "有机小油菜 400g",
+      "categoryId": "cat_7_mvc2e5ux",
+      "status": "on",
+      "saleType": "spot",
+      "pickupOnly": true,
+      "isHot": false,
+      "sort": 70,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:17:56.650Z",
+      "updatedAt": "2026-10-17T07:17:56.650Z"
+    },
+    {
+      "id": "p_20_mvc2e5uy",
+      "title": "本地西红柿 2斤",
+      "cover": "https://picsum.photos/seed/groupbuy5/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy5/600/600",
+        "https://picsum.photos/seed/groupbuy15/600/600"
+      ],
+      "detail": "本地西红柿 2斤",
+      "categoryId": "cat_7_mvc2e5ux",
+      "status": "on",
+      "saleType": "spot",
+      "pickupOnly": true,
+      "isHot": true,
+      "sort": 75,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:17:56.650Z",
+      "updatedAt": "2026-10-17T07:17:56.650Z"
+    },
+    {
+      "id": "p_22_mvc2e5uy",
+      "title": "土鸡蛋 30枚装",
+      "cover": "https://picsum.photos/seed/groupbuy6/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy6/600/600",
+        "https://picsum.photos/seed/groupbuy16/600/600"
+      ],
+      "detail": "土鸡蛋 30枚装",
+      "categoryId": "cat_8_mvc2e5ux",
+      "status": "on",
+      "saleType": "spot",
+      "pickupOnly": true,
+      "isHot": false,
+      "sort": 65,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:17:56.650Z",
+      "updatedAt": "2026-10-17T07:17:56.650Z"
+    },
+    {
+      "id": "p_24_mvc2e5uy",
+      "title": "鲜牛乳吐司 400g",
+      "cover": "https://picsum.photos/seed/groupbuy7/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy7/600/600",
+        "https://picsum.photos/seed/groupbuy17/600/600"
+      ],
+      "detail": "鲜牛乳吐司 400g",
+      "categoryId": "cat_10_mvc2e5ux",
+      "status": "on",
+      "saleType": "spot",
+      "pickupOnly": true,
+      "isHot": false,
+      "sort": 60,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:17:56.650Z",
+      "updatedAt": "2026-10-17T07:17:56.650Z"
+    },
+    {
+      "id": "p_26_mvc2e5uz",
+      "title": "五常大米 5kg",
+      "cover": "https://picsum.photos/seed/groupbuy8/600/600",
+      "images": [
+        "https://picsum.photos/seed/groupbuy8/600/600",
+        "https://picsum.photos/seed/groupbuy18/600/600"
+      ],
+      "detail": "五常大米 5kg",
+      "categoryId": "cat_9_mvc2e5ux",
+      "status": "on",
+      "saleType": "mixed",
+      "pickupOnly": true,
+      "isHot": false,
+      "sort": 55,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:17:56.651Z",
+      "updatedAt": "2026-10-17T07:17:56.651Z"
+    },
+    {
+      "id": "p_33_mvc2gnz3",
+      "title": "测试番茄",
+      "cover": "https://picsum.photos/seed/t/600/600",
+      "images": [],
+      "detail": "",
+      "categoryId": null,
+      "status": "on",
+      "saleType": "spot",
+      "pickupOnly": true,
+      "isHot": false,
+      "sort": 0,
+      "activityPrice": null,
+      "createdAt": "2026-10-17T07:19:53.439Z",
+      "updatedAt": "2026-10-17T07:19:53.439Z"
+    }
+  ],
+  "productSkus": [
+    {
+      "id": "sk_12_mvc2e5ux",
+      "productId": "p_11_mvc2e5ux",
+      "name": "3-4斤",
+      "spec": "",
+      "price": 89.9,
+      "linePrice": 129,
+      "stock": 48,
+      "image": "https://picsum.photos/seed/groupbuy1/600/600",
+      "deleted": true
+    },
+    {
+      "id": "sk_13_mvc2e5ux",
+      "productId": "p_11_mvc2e5ux",
+      "name": "5-6斤",
+      "spec": "",
+      "price": 139.9,
+      "linePrice": 199,
+      "stock": 30,
+      "image": "https://picsum.photos/seed/groupbuy1/600/600",
+      "deleted": true
+    },
+    {
+      "id": "sk_15_mvc2e5uy",
+      "productId": "p_14_mvc2e5ux",
+      "name": "5斤",
+      "spec": "中果",
+      "price": 29.9,
+      "linePrice": 39.9,
+      "stock": 198,
+      "image": "https://picsum.photos/seed/groupbuy2/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_17_mvc2e5uy",
+      "productId": "p_16_mvc2e5uy",
+      "name": "3斤",
+      "spec": "",
+      "price": 35.9,
+      "linePrice": null,
+      "stock": 79,
+      "image": "https://picsum.photos/seed/groupbuy3/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_19_mvc2e5uy",
+      "productId": "p_18_mvc2e5uy",
+      "name": "400g",
+      "spec": "",
+      "price": 4.9,
+      "linePrice": null,
+      "stock": 300,
+      "image": "https://picsum.photos/seed/groupbuy4/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_21_mvc2e5uy",
+      "productId": "p_20_mvc2e5uy",
+      "name": "2斤",
+      "spec": "",
+      "price": 8.9,
+      "linePrice": 12.9,
+      "stock": 138,
+      "image": "https://picsum.photos/seed/groupbuy5/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_23_mvc2e5uy",
+      "productId": "p_22_mvc2e5uy",
+      "name": "30枚",
+      "spec": "",
+      "price": 32.9,
+      "linePrice": null,
+      "stock": 100,
+      "image": "https://picsum.photos/seed/groupbuy6/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_25_mvc2e5uz",
+      "productId": "p_24_mvc2e5uy",
+      "name": "400g",
+      "spec": "",
+      "price": 12.8,
+      "linePrice": null,
+      "stock": 59,
+      "image": "https://picsum.photos/seed/groupbuy7/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_27_mvc2e5uz",
+      "productId": "p_26_mvc2e5uz",
+      "name": "5kg",
+      "spec": "",
+      "price": 49.9,
+      "linePrice": 69,
+      "stock": 80,
+      "image": "https://picsum.photos/seed/groupbuy8/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_34_mvc2gnz4",
+      "productId": "p_33_mvc2gnz3",
+      "name": "1斤",
+      "spec": "",
+      "price": 5.5,
+      "linePrice": null,
+      "stock": 10,
+      "image": "https://picsum.photos/seed/t/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_42_mvc37v5f",
+      "productId": "p_11_mvc2e5ux",
+      "name": "3-4斤",
+      "spec": "",
+      "price": 89.9,
+      "linePrice": null,
+      "stock": 39,
+      "image": "https://picsum.photos/seed/groupbuy1/600/600",
+      "deleted": false
+    },
+    {
+      "id": "sk_43_mvc37v5f",
+      "productId": "p_11_mvc2e5ux",
+      "name": "5-6斤",
+      "spec": "",
+      "price": 139.9,
+      "linePrice": null,
+      "stock": 29,
+      "image": "https://picsum.photos/seed/groupbuy1/600/600",
+      "deleted": false
+    }
+  ],
+  "activities": [],
+  "orders": [
+    {
+      "id": "o_31_mvc2ekd8",
+      "orderNo": "TG261017EB2C55E7",
+      "userId": "u_3_mvc2e5ux",
+      "status": "verified",
+      "total": 89.9,
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T07:18:15.453Z",
+      "paidAt": "2026-10-17T07:18:15.535Z",
+      "verifiedAt": "2026-10-17T07:18:15.644Z",
+      "cancelledAt": null
+    },
+    {
+      "id": "o_40_mvc35g3y",
+      "orderNo": "TG261017AF43167B",
+      "userId": "u_37_mvc31y35",
+      "status": "ready",
+      "total": 109.8,
+      "pickupPointId": "pp_5_mvc2e5ux",
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T07:39:09.648Z",
+      "paidAt": "2026-10-17T07:39:10.403Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_54_mvc4c0uq",
+      "orderNo": "TG2610179A993962",
+      "userId": "u_3_mvc2e5ux",
+      "status": "ready",
+      "total": 179.8,
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T08:12:16.082Z",
+      "paidAt": "2026-10-17T08:12:16.135Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_57_mvc6fg0c",
+      "orderNo": "TG2610173D3B3BE7",
+      "userId": "u_52_mvc3xv20",
+      "status": "ready",
+      "total": 89.9,
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:10:54.924Z",
+      "paidAt": "2026-10-17T09:10:55.029Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_60_mvc6gofa",
+      "orderNo": "TG261017EBF929A9",
+      "userId": "u_3_mvc2e5ux",
+      "status": "unpaid",
+      "total": 89.9,
+      "fulfillment": "delivery",
+      "pickupPointId": null,
+      "deliveryAddress": {
+        "community": "阳光小区",
+        "building": "3号楼",
+        "room": "2单元501",
+        "contactName": "张三",
+        "contactPhone": "13800001111",
+        "text": "阳光小区 3号楼 2单元501"
+      },
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:11:52.486Z",
+      "paidAt": null,
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_63_mvc6gojo",
+      "orderNo": "TG26101712B9CAA2",
+      "userId": "u_3_mvc2e5ux",
+      "status": "unpaid",
+      "total": 89.9,
+      "fulfillment": "pickup",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:11:52.644Z",
+      "paidAt": null,
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_66_mvc6o5e8",
+      "orderNo": "TG261017D4CCC981",
+      "userId": "u_52_mvc3xv20",
+      "status": "ready",
+      "total": 12.8,
+      "fulfillment": "delivery",
+      "pickupPointId": null,
+      "deliveryAddress": {
+        "community": "万科假日风景",
+        "building": "3号楼",
+        "room": "502",
+        "contactName": "叶忠祥",
+        "contactPhone": "18663889320",
+        "text": "万科假日风景 3号楼 502"
+      },
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:17:41.072Z",
+      "paidAt": "2026-10-17T09:17:41.176Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_69_mvc6pawl",
+      "orderNo": "TG261017C07D6F2C",
+      "userId": "u_52_mvc3xv20",
+      "status": "ready",
+      "total": 89.9,
+      "fulfillment": "pickup",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:18:34.869Z",
+      "paidAt": "2026-10-17T09:18:34.919Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_72_mvc6rre4",
+      "orderNo": "TG261017347026F6",
+      "userId": "u_3_mvc2e5ux",
+      "status": "verified",
+      "total": 89.9,
+      "fulfillment": "pickup",
+      "payMode": "cod",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:20:29.549Z",
+      "paidAt": "2026-10-17T09:20:29.911Z",
+      "verifiedAt": "2026-10-17T09:20:29.911Z",
+      "cancelledAt": null,
+      "paidBy": "cod"
+    },
+    {
+      "id": "o_75_mvc6rrht",
+      "orderNo": "TG26101729080AB7",
+      "userId": "u_3_mvc2e5ux",
+      "status": "ready",
+      "total": 89.9,
+      "fulfillment": "pickup",
+      "payMode": "online",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:20:29.681Z",
+      "paidAt": "2026-10-17T09:20:29.733Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_78_mvc6tfrv",
+      "orderNo": "TG261017FC5998CB",
+      "userId": "u_37_mvc31y35",
+      "status": "ready",
+      "total": 8.9,
+      "fulfillment": "pickup",
+      "payMode": "online",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:21:47.803Z",
+      "paidAt": "2026-10-17T09:21:48.577Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_81_mvc6wfet",
+      "orderNo": "TG26101749A70D19",
+      "userId": "u_3_mvc2e5ux",
+      "status": "unpaid",
+      "total": 89.9,
+      "fulfillment": "pickup",
+      "payMode": "online",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:24:07.305Z",
+      "paidAt": null,
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_84_mvc70na3",
+      "orderNo": "TG261017CFECBF8E",
+      "userId": "u_37_mvc31y35",
+      "status": "ready",
+      "total": 8.9,
+      "fulfillment": "pickup",
+      "payMode": "online",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:27:24.124Z",
+      "paidAt": "2026-10-17T09:27:25.070Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    },
+    {
+      "id": "o_90_mvc71vtn",
+      "orderNo": "TG26101774489931",
+      "userId": "u_37_mvc31y35",
+      "status": "ready",
+      "total": 284.7,
+      "fulfillment": "pickup",
+      "payMode": "online",
+      "pickupPointId": "pp_4_mvc2e5ux",
+      "deliveryAddress": null,
+      "expectDate": null,
+      "remark": "",
+      "createdAt": "2026-10-17T09:28:21.851Z",
+      "paidAt": "2026-10-17T09:28:22.043Z",
+      "verifiedAt": null,
+      "cancelledAt": null
+    }
+  ],
+  "orderItems": [
+    {
+      "id": "oi_30_mvc2ekd8",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_12_mvc2e5ux",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_31_mvc2ekd8"
+    },
+    {
+      "id": "oi_38_mvc35g3x",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_12_mvc2e5ux",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_40_mvc35g3y"
+    },
+    {
+      "id": "oi_39_mvc35g3y",
+      "productId": "p_14_mvc2e5ux",
+      "skuId": "sk_15_mvc2e5uy",
+      "title": "山东烟台红富士苹果 5斤装",
+      "skuName": "5斤",
+      "skuSpec": "中果",
+      "price": 19.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy2/600/600",
+      "orderId": "o_40_mvc35g3y"
+    },
+    {
+      "id": "oi_53_mvc4c0up",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 2,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_54_mvc4c0uq"
+    },
+    {
+      "id": "oi_56_mvc6fg0b",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_57_mvc6fg0c"
+    },
+    {
+      "id": "oi_59_mvc6gofa",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_60_mvc6gofa"
+    },
+    {
+      "id": "oi_62_mvc6gojo",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_63_mvc6gojo"
+    },
+    {
+      "id": "oi_65_mvc6o5e7",
+      "productId": "p_24_mvc2e5uy",
+      "skuId": "sk_25_mvc2e5uz",
+      "title": "鲜牛乳吐司 400g",
+      "skuName": "400g",
+      "skuSpec": "",
+      "price": 12.8,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy7/600/600",
+      "orderId": "o_66_mvc6o5e8"
+    },
+    {
+      "id": "oi_68_mvc6pawk",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_69_mvc6pawl"
+    },
+    {
+      "id": "oi_71_mvc6rre4",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_72_mvc6rre4"
+    },
+    {
+      "id": "oi_74_mvc6rrht",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_75_mvc6rrht"
+    },
+    {
+      "id": "oi_77_mvc6tfru",
+      "productId": "p_20_mvc2e5uy",
+      "skuId": "sk_21_mvc2e5uy",
+      "title": "本地西红柿 2斤",
+      "skuName": "2斤",
+      "skuSpec": "",
+      "price": 8.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy5/600/600",
+      "orderId": "o_78_mvc6tfrv"
+    },
+    {
+      "id": "oi_80_mvc6wfet",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_42_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "3-4斤",
+      "skuSpec": "",
+      "price": 89.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_81_mvc6wfet"
+    },
+    {
+      "id": "oi_83_mvc70na2",
+      "productId": "p_20_mvc2e5uy",
+      "skuId": "sk_21_mvc2e5uy",
+      "title": "本地西红柿 2斤",
+      "skuName": "2斤",
+      "skuSpec": "",
+      "price": 8.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy5/600/600",
+      "orderId": "o_84_mvc70na3"
+    },
+    {
+      "id": "oi_86_mvc71vtk",
+      "productId": "p_14_mvc2e5ux",
+      "skuId": "sk_15_mvc2e5uy",
+      "title": "山东烟台红富士苹果 5斤装",
+      "skuName": "5斤",
+      "skuSpec": "中果",
+      "price": 19.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy2/600/600",
+      "orderId": "o_90_mvc71vtn"
+    },
+    {
+      "id": "oi_87_mvc71vtl",
+      "productId": "p_11_mvc2e5ux",
+      "skuId": "sk_43_mvc37v5f",
+      "title": "泰国金枕榴莲 3-4斤整果",
+      "skuName": "5-6斤",
+      "skuSpec": "",
+      "price": 139.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy1/600/600",
+      "orderId": "o_90_mvc71vtn"
+    },
+    {
+      "id": "oi_88_mvc71vtl",
+      "productId": "p_16_mvc2e5uy",
+      "skuId": "sk_17_mvc2e5uy",
+      "title": "海南贵妃芒 3斤",
+      "skuName": "3斤",
+      "skuSpec": "",
+      "price": 35.9,
+      "qty": 1,
+      "cover": "https://picsum.photos/seed/groupbuy3/600/600",
+      "orderId": "o_90_mvc71vtn"
+    },
+    {
+      "id": "oi_89_mvc71vtm",
+      "productId": "p_20_mvc2e5uy",
+      "skuId": "sk_21_mvc2e5uy",
+      "title": "本地西红柿 2斤",
+      "skuName": "2斤",
+      "skuSpec": "",
+      "price": 8.9,
+      "qty": 10,
+      "cover": "https://picsum.photos/seed/groupbuy5/600/600",
+      "orderId": "o_90_mvc71vtn"
+    }
+  ],
+  "verifyCodes": [
+    {
+      "id": "vc_32_mvc2ekd9",
+      "orderId": "o_31_mvc2ekd8",
+      "code": "VC4398FC56EDF1",
+      "status": "verified",
+      "verifiedBy": "u_2_mvc2e5ux",
+      "verifiedAt": "2026-10-17T07:18:15.644Z"
+    },
+    {
+      "id": "vc_41_mvc35g40",
+      "orderId": "o_40_mvc35g3y",
+      "code": "VC54703E59594C",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_55_mvc4c0uq",
+      "orderId": "o_54_mvc4c0uq",
+      "code": "VC1C83ED281857",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_58_mvc6fg0c",
+      "orderId": "o_57_mvc6fg0c",
+      "code": "VCFC4A9CCA179E",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_61_mvc6gofa",
+      "orderId": "o_60_mvc6gofa",
+      "code": "VCDA70A7294B03",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_64_mvc6gojo",
+      "orderId": "o_63_mvc6gojo",
+      "code": "VC76F4B3CF341C",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_67_mvc6o5e9",
+      "orderId": "o_66_mvc6o5e8",
+      "code": "VCDA80F39C9EFF",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_70_mvc6pawm",
+      "orderId": "o_69_mvc6pawl",
+      "code": "VCA8750F3EE17F",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_73_mvc6rre5",
+      "orderId": "o_72_mvc6rre4",
+      "code": "VCEBF20556983C",
+      "status": "verified",
+      "verifiedBy": "u_2_mvc2e5ux",
+      "verifiedAt": "2026-10-17T09:20:29.911Z"
+    },
+    {
+      "id": "vc_76_mvc6rrht",
+      "orderId": "o_75_mvc6rrht",
+      "code": "VCB7F947147032",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_79_mvc6tfrv",
+      "orderId": "o_78_mvc6tfrv",
+      "code": "VCA42A58C1EB86",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_82_mvc6wfex",
+      "orderId": "o_81_mvc6wfet",
+      "code": "VCB49DFB6A9319",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_85_mvc70na4",
+      "orderId": "o_84_mvc70na3",
+      "code": "VCA8160810D2DA",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "vc_91_mvc71vtn",
+      "orderId": "o_90_mvc71vtn",
+      "code": "VC51B78650251E",
+      "status": "active",
+      "verifiedBy": null,
+      "verifiedAt": null
+    }
+  ],
+  "banners": [
+    {
+      "id": "bn_28_mvc2e5uz",
+      "image": "https://picsum.photos/seed/groupbuy90/600/600",
+      "link": "/pages/index/index",
+      "title": "周末水果节 · 立减 10 元",
+      "sort": 10,
+      "status": "on"
+    },
+    {
+      "id": "bn_29_mvc2e5v0",
+      "image": "https://picsum.photos/seed/groupbuy91/600/600",
+      "link": "/pages/category/category",
+      "title": "次日达自提 · 新鲜看得见",
+      "sort": 9,
+      "status": "on"
+    }
+  ],
+  "seq": 92
+}

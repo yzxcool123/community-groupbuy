@@ -1,0 +1,177 @@
+.page {
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+}
+
+.stat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16rpx;
+}
+
+.stat-card {
+  width: calc(50% - 16rpx);
+  margin: 8rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  padding: 28rpx 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(31, 35, 41, 0.04);
+}
+
+.stat-num {
+  font-size: 40rpx;
+  font-weight: 800;
+  color: #1F2329;
+  font-family: 'DINAlternate', 'PingFang SC', sans-serif;
+}
+
+.price-text {
+  color: #FA2C19;
+}
+
+.warn-text {
+  color: #FF8F1F;
+}
+
+.stat-label {
+  font-size: 22rpx;
+  color: #646A73;
+  margin-top: 10rpx;
+}
+
+.block-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+
+.quick-grid {
+  display: flex;
+}
+
+.quick-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 0;
+}
+
+.q-icon {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 24rpx;
+  background: #F2F7F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  margin-bottom: 12rpx;
+}
+
+.q-label {
+  font-size: 22rpx;
+  color: #1F2329;
+}
+
+/* 图表 */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 220rpx;
+  padding: 10rpx 0;
+}
+
+.chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar-val {
+  font-size: 18rpx;
+  color: #646A73;
+  margin-bottom: 8rpx;
+}
+
+.bar-track {
+  width: 36rpx;
+  height: 140rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar {
+  width: 28rpx;
+  background: linear-gradient(180deg, #FF6700, #8AE6B0);
+  border-radius: 8rpx 8rpx 4rpx 4rpx;
+}
+
+.bar-date {
+  font-size: 18rpx;
+  color: #8B919B;
+  margin-top: 10rpx;
+}
+
+/* 热销 */
+.hot-row {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #F0F1F3;
+}
+
+.hot-row:last-child {
+  border-bottom: none;
+}
+
+.hot-rank {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  background: #F2F3F5;
+  color: #646A73;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 14rpx;
+  flex-shrink: 0;
+}
+
+.hot-rank.top {
+  background: #FFF3E0;
+  color: #FF8F1F;
+}
+
+.hot-cover {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  background: #F2F3F5;
+  flex-shrink: 0;
+}
+
+.hot-info {
+  flex: 1;
+  min-width: 0;
+  margin: 0 16rpx;
+}
+
+.hot-title {
+  font-size: 26rpx;
+  color: #1F2329;
+  font-weight: 500;
+}
+
+.hot-meta {
+  font-size: 20rpx;
+  color: #8B919B;
+  margin-top: 6rpx;
+}

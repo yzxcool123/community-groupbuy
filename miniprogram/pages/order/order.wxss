@@ -1,0 +1,128 @@
+.page {
+padding-bottom: 40rpx;
+}
+
+.tabs {
+  display: flex;
+  background: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2rpx 8rpx rgba(31, 35, 41, 0.04);
+}
+
+.tab-item {
+  flex: 1;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 28rpx;
+  color: #646A73;
+}
+
+.tab-item.active {
+  color: #FF6700;
+  font-weight: 600;
+}
+
+.tab-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background: #FF6700;
+}
+
+.order-card {
+  padding: 24rpx;
+}
+
+.o-head {
+  margin-bottom: 20rpx;
+}
+
+.o-no {
+  font-size: 22rpx;
+  color: #8B919B;
+  flex: 1;
+  margin-right: 16rpx;
+}
+
+.o-goods {
+  background: #F7F8FA;
+  border-radius: 12rpx;
+  padding: 16rpx 20rpx;
+}
+
+.og-row {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+}
+
+.og-cover {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 8rpx;
+  background: #E5E6EB;
+  flex-shrink: 0;
+}
+
+.og-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 14rpx;
+}
+
+.og-title {
+  font-size: 24rpx;
+  color: #1F2329;
+}
+
+.og-spec {
+  font-size: 20rpx;
+  color: #8B919B;
+  margin-top: 6rpx;
+}
+
+.og-right {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 12rpx;
+}
+
+.og-qty {
+  font-size: 20rpx;
+  color: #8B919B;
+  margin-top: 6rpx;
+}
+
+.og-more {
+  font-size: 20rpx;
+  color: #8B919B;
+  text-align: center;
+  padding-top: 8rpx;
+}
+
+.o-foot {
+  margin-top: 20rpx;
+  padding-bottom: 16rpx;
+}
+
+.muted {
+  color: #8B919B;
+  font-size: 22rpx;
+}
+
+.o-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16rpx;
+  padding-top: 16rpx;
+  border-top: 1rpx solid #F0F1F3;
+}

@@ -1,0 +1,42 @@
+<view class="page">
+  <view class="card">
+    <view class="row between">
+      <text class="k">当前环境</text>
+      <text class="v">{{env}}</text>
+    </view>
+    <view class="row between">
+      <text class="k">请求地址</text>
+      <text class="v mono">{{baseUrl}}</text>
+    </view>
+    <view class="row between">
+      <text class="k">网络类型</text>
+      <text class="v">{{networkType || '未知'}}</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="btn btn-primary btn-block" bindtap="onTest">
+      {{testing ? '测试中…' : '测试连接 /api/health'}}
+    </view>
+    <view class="btn btn-ghost btn-block copy-btn" bindtap="onCopy">复制诊断信息</view>
+  </view>
+
+  <view class="card" wx:if="{{result}}">
+    <view class="title ok">✅ 连接成功</view>
+    <text class="mono block">{{result}}</text>
+  </view>
+
+  <view class="card" wx:if="{{error}}">
+    <view class="title err">❌ 连接失败</view>
+    <text class="mono block">{{error}}</text>
+    <view class="hint">
+      常见原因：体验版未开启「开发调试」；服务器端口未放行；手机网络异常。
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="title">日志</view>
+    <view class="log" wx:for="{{logs}}" wx:key="*this">{{item}}</view>
+    <view class="hint" wx:if="{{!logs.length}}">点上方按钮开始测试</view>
+  </view>
+</view>

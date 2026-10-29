@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="tip">送货上门请先维护地址，结算时可直接选择</view>
+
+  <view class="addr-item card-flat" wx:for="{{list}}" wx:key="id">
+    <view class="a-main" data-id="{{item.id}}" bindtap="onEdit">
+      <view class="a-line1">
+        <text class="a-name">{{item.contactName}}</text>
+        <text class="a-phone">{{item.contactPhone}}</text>
+        <text class="badge badge-primary" wx:if="{{item.isDefault}}">默认</text>
+      </view>
+      <view class="a-line2">{{item.community}} · {{item.building}} · {{item.room}}</view>
+      <view class="a-text">{{item.community}} {{item.building}} {{item.room}}</view>
+    </view>
+    <view class="a-ops">
+      <view class="a-op" data-id="{{item.id}}" bindtap="onSetDefault" wx:if="{{!item.isDefault}}">设为默认</view>
+      <view class="a-op" data-id="{{item.id}}" bindtap="onEdit">编辑</view>
+      <view class="a-op danger" data-id="{{item.id}}" bindtap="onRemove">删除</view>
+    </view>
+  </view>
+
+  <view class="empty" wx:if="{{!list.length}}">
+    <view class="empty-icon">📍</view>
+    <view class="empty-text">还没有收货地址</view>
+  </view>
+
+  <view class="page-pad-bottom" style="height:140rpx;"></view>
+  <view class="footer-bar footer-bar--show">
+    <view class="btn btn-primary btn-block" bindtap="onAdd">+ 新增收货地址</view>
+  </view>
+</view>

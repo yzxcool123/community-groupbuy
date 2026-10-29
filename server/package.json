@@ -1,0 +1,17 @@
+{
+  "name": "community-groupbuy-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "社区团购后端 API（Express + JWT + JSON 存储）",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

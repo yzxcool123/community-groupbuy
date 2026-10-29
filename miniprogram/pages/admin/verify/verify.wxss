@@ -1,0 +1,160 @@
+.page {
+height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 40rpx;
+}
+
+.scan-hero {
+  background: linear-gradient(135deg, #FF6700 0%, #E85D00 100%);
+  padding: 56rpx 32rpx;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.scan-icon {
+  font-size: 72rpx;
+  margin-bottom: 12rpx;
+}
+
+.scan-title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.scan-sub {
+  font-size: 22rpx;
+  opacity: 0.9;
+  margin-top: 12rpx;
+  margin-bottom: 28rpx;
+}
+
+.scan-btn {
+  display: inline-flex;
+  background: #FFFFFF !important;
+  color: #FF6700 !important;
+  height: 76rpx;
+  min-width: 280rpx;
+}
+
+.block-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  background: #F7F8FA;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  height: 88rpx;
+}
+
+.code-input {
+  flex: 1;
+  height: 88rpx;
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+  font-weight: 600;
+}
+
+.clear {
+  color: #B0B6BF;
+  padding: 12rpx;
+  font-size: 28rpx;
+}
+
+.result-tip {
+  margin: 20rpx 24rpx 0;
+  padding: 20rpx 28rpx;
+  border-radius: 12rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+.result-tip.ok {
+  background: rgba(255, 103, 0, 0.1);
+  color: #FF6700;
+  border: 1rpx solid rgba(255, 103, 0, 0.25);
+}
+
+.result-tip.fail {
+  background: rgba(250, 44, 25, 0.08);
+  color: #FA2C19;
+  border: 1rpx solid rgba(250, 44, 25, 0.2);
+}
+
+.q-head {
+  margin-bottom: 20rpx;
+}
+
+.q-no {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #1F2329;
+}
+
+.q-item {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 0;
+}
+
+.q-cover {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 10rpx;
+  background: #F2F3F5;
+  flex-shrink: 0;
+}
+
+.q-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 16rpx;
+}
+
+.q-title {
+  font-size: 26rpx;
+  color: #1F2329;
+  font-weight: 500;
+}
+
+.q-spec {
+  font-size: 22rpx;
+  color: #8B919B;
+  margin-top: 6rpx;
+}
+
+.q-qty {
+  font-size: 24rpx;
+  color: #646A73;
+  margin-left: 12rpx;
+  flex-shrink: 0;
+}
+
+.muted {
+  color: #646A73;
+  font-size: 26rpx;
+}
+
+.q-pickup {
+  margin-top: 16rpx;
+  padding: 16rpx 20rpx;
+  background: #F7F8FA;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  color: #646A73;
+  line-height: 1.5;
+}
+
+.tips {
+  margin-top: 20rpx;
+}
+
+.tip-item {
+  font-size: 22rpx;
+  color: #8B919B;
+  line-height: 1.8;
+}

@@ -1,0 +1,78 @@
+<view class="page">
+  <!-- 搜索 -->
+  <view class="search-row">
+    <view class="search-box">
+      <text class="s-icon">🔍</text>
+      <input
+        class="s-input"
+        placeholder="搜索商品"
+        placeholder-class="form-placeholder"
+        value="{{keyword}}"
+        focus="{{focus}}"
+        confirm-type="search"
+        bindinput="onSearchInput"
+        bindconfirm="onSearchConfirm"
+      />
+      <view class="s-clear" wx:if="{{keyword}}" catchtap="onSearchClear">✕</view>
+    </view>
+    <view class="s-btn" bindtap="onSearchConfirm">搜索</view>
+  </view>
+
+  <view class="body">
+    <!-- 左侧分类 -->
+    <scroll-view scroll-y class="side">
+      <view
+        class="side-item {{activeId === item.id ? 'active' : ''}}"
+        wx:for="{{categories}}"
+        wx:key="id"
+        data-id="{{item.id}}"
+        bindtap="onCatTap"
+      >
+        <view class="side-indicator" wx:if="{{activeId === item.id}}"></view>
+        <text class="side-name">{{item.name}}</text>
+      </view>
+      <view class="side-item {{activeId === '' ? 'active' : ''}}" data-id="" bindtap="onCatTap">
+        <view class="side-indicator" wx:if="{{activeId === ''}}"></view>
+        <text class="side-name">全部</text>
+      </view>
+    </scroll-view>
+
+    <!-- 右侧商品 -->
+    <scroll-view scroll-y class="main">
+      <view class="main-inner">
+        <view class="loading-wrap" wx:if="{{loading}}">
+          <text>加载中…</text>
+        </view>
+
+        <block wx:if="{{!loading}}">
+          <view class="goods-item" wx:for="{{products}}" wx:key="id" data-id="{{item.id}}" bindtap="onProductTap">
+            <image class="g-cover" src="{{item.cover}}" mode="aspectFill" />
+            <view class="g-info">
+              <view class="g-title ellipsis-2">{{item.title}}</view>
+              <view class="g-tags">
+                <text class="badge badge-danger" wx:if="{{item.isHot}}">热销</text>
+                <text class="badge badge-warning" wx:if="{{item.saleType === 'presale'}}">预售</text>
+                <text class="badge badge-primary" wx:if="{{item.activityPrice != null}}">活动</text>
+              </view>
+              <view class="row between g-bottom">
+                <view>
+                  <text class="price">
+                    <text class="price-symbol">¥</text>
+                    <text>{{item.activityPrice != null ? item.activityPrice : item.minPrice}}</text>
+                  </text>
+                  <text class="price-origin" wx:if="{{item.activityPrice != null}}">¥{{item.minPrice}}</text>
+                </view>
+                <view class="g-go">选购</view>
+              </view>
+            </view>
+          </view>
+
+          <view class="empty" wx:if="{{!products.length}}">
+            <view class="empty-icon">🛒</view>
+            <view class="empty-text">该分类暂无商品</view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+</view>

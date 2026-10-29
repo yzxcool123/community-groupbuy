@@ -1,0 +1,57 @@
+<view class="page">
+  <block wx:if="{{list.length}}">
+    <view class="list">
+      <view class="cart-item card-flat" wx:for="{{list}}" wx:key="skuId">
+        <view class="check {{item.checked ? 'on' : ''}}" data-skuid="{{item.skuId}}" bindtap="onToggle">
+          <text wx:if="{{item.checked}}">✓</text>
+        </view>
+        <image class="c-cover" src="{{item.cover}}" mode="aspectFill" data-pid="{{item.productId}}" bindtap="onProductTap" />
+        <view class="c-info">
+          <view class="c-title ellipsis-2">{{item.title}}</view>
+          <view class="c-spec">{{item.skuName}}{{item.skuSpec ? ' · ' + item.skuSpec : ''}}</view>
+          <view class="row between c-bottom">
+            <view class="price">
+              <text class="price-symbol">¥</text>
+              <text style="font-size:32rpx;">{{item.price}}</text>
+            </view>
+            <view class="stepper">
+              <view class="step-btn" data-skuid="{{item.skuId}}" data-qty="{{item.qty}}" bindtap="onMinus">−</view>
+              <view class="step-num">{{item.qty}}</view>
+              <view class="step-btn" data-skuid="{{item.skuId}}" data-qty="{{item.qty}}" bindtap="onPlus">+</view>
+            </view>
+          </view>
+        </view>
+        <view class="c-del" data-skuid="{{item.skuId}}" bindtap="onRemove">✕</view>
+      </view>
+    </view>
+
+    <view class="page-pad-bottom" style="height:120rpx;"></view>
+
+    <view class="footer-bar footer-bar--show">
+      <view class="row flex-1" bindtap="onToggleAll">
+        <view class="check {{allChecked ? 'on' : ''}}">
+          <text wx:if="{{allChecked}}">✓</text>
+        </view>
+        <text class="all-text">全选</text>
+      </view>
+      <view class="row">
+        <view class="total-box">
+          <text class="muted">合计：</text>
+          <text class="price">
+            <text class="price-symbol">¥</text>
+            <text style="font-size:36rpx;">{{totalAmount}}</text>
+          </text>
+        </view>
+        <view class="btn btn-primary settle {{checkedCount ? '' : 'btn-disabled'}}" bindtap="checkout">
+          结算({{checkedCount}})
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class="empty" wx:else>
+    <view class="empty-icon">🛒</view>
+    <view class="empty-text">购物车还是空的</view>
+    <view class="btn btn-primary" bindtap="goShopping">去逛逛</view>
+  </view>
+</view>

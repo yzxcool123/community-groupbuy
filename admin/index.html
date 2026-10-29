@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>邻里团购 · 管理后台</title>
+  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2307C160'/><text x='50' y='58' text-anchor='middle' font-size='48' fill='white'>邻</text></svg>" />
+</head>
+<body>
+  <div id="app">
+    <!-- 登录页 -->
+    <div id="view-login" class="login-wrap hidden">
+      <div class="login-card">
+        <div class="login-brand">
+          <div class="logo">邻</div>
+          <div>
+            <h1>邻里团购</h1>
+            <p>社区团购运营管理后台</p>
+          </div>
+        </div>
+        <form id="login-form">
+          <label>
+            <span>账号</span>
+            <input id="login-username" autocomplete="username" placeholder="admin" value="admin" />
+          </label>
+          <label>
+            <span>密码</span>
+            <input id="login-password" type="password" autocomplete="current-password" placeholder="admin123" value="admin123" />
+          </label>
+          <button type="submit" class="btn btn-primary btn-block" id="login-btn">登 录</button>
+          <p class="login-tip">演示账号：admin / admin123 · staff01 / staff123</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- 主框架 -->
+    <div id="layout" class="layout hidden">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">邻</div>
+          <div>
+            <strong>邻里团购</strong>
+            <small>管理后台</small>
+          </div>
+        </div>
+        <nav class="menu" id="menu"></nav>
+        <div class="sidebar-foot">
+          <div class="user-chip">
+            <div class="avatar" id="side-avatar">A</div>
+            <div class="meta">
+              <div id="side-name">管理员</div>
+              <small id="side-role">admin</small>
+            </div>
+            <button class="btn-ghost" id="logout-btn" title="退出">退出</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h2 id="page-title">工作台</h2>
+            <p id="page-sub" class="muted">今日经营概览</p>
+          </div>
+          <div class="topbar-actions" id="topbar-actions"></div>
+        </header>
+        <div id="page" class="page"></div>
+      </main>
+    </div>
+  </div>
+
+  <!-- 弹窗容器 -->
+  <div id="modal-root" class="modal-root hidden">
+    <div class="modal-mask" data-close></div>
+    <div class="modal" id="modal-box"></div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="./js/api.js?v=2"></script>
+  <script src="./js/ui.js?v=3"></script>
+  <script src="./js/views.js?v=3"></script>
+  <script src="./js/app.js?v=3"></script>
+</body>
+</html>

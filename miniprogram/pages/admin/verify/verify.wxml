@@ -1,0 +1,78 @@
+<view class="page">
+  <view class="scan-hero">
+    <view class="scan-icon">📷</view>
+    <view class="scan-title">核销提货</view>
+    <view class="scan-sub">扫描顾客核销码，或手动输入 VC 开头的核销码</view>
+    <view class="btn btn-primary scan-btn" bindtap="scan">扫码核销</view>
+  </view>
+
+  <!-- 手动输入 -->
+  <view class="card">
+    <view class="block-title">手动输入</view>
+    <view class="input-row">
+      <input
+        class="code-input"
+        placeholder="请输入核销码，如 VC123456"
+        placeholder-class="form-placeholder"
+        value="{{code}}"
+        bindinput="onInput"
+        confirm-type="search"
+        bindconfirm="query"
+      />
+      <view class="clear" wx:if="{{code}}" bindtap="onClear">✕</view>
+    </view>
+    <view class="btn btn-outline btn-block" style="margin-top:20rpx;" bindtap="query">查询订单</view>
+  </view>
+
+  <!-- 结果提示 -->
+  <view class="result-tip ok" wx:if="{{result && result.ok}}">✅ {{result.msg}}</view>
+  <view class="result-tip fail" wx:if="{{result && !result.ok}}">❌ {{result.msg}}</view>
+
+  <!-- 订单预览 -->
+  <view class="card" wx:if="{{queryResult}}">
+    <view class="row between q-head">
+      <view class="q-no">订单 {{queryResult.orderNo}}</view>
+      <view class="badge {{queryResult.status === 'verified' ? 'badge-muted' : 'badge-primary'}}">
+        {{queryResult.statusText}}
+      </view>
+    </view>
+
+    <view class="q-item" wx:for="{{queryResult.items}}" wx:key="id">
+      <image class="q-cover" src="{{item.cover}}" mode="aspectFill" />
+      <view class="q-info">
+        <view class="q-title ellipsis">{{item.title}}</view>
+        <view class="q-spec">{{item.skuName}}{{item.skuSpec ? ' · ' + item.skuSpec : ''}}</view>
+      </view>
+      <view class="q-qty">x{{item.qty}}</view>
+    </view>
+
+    <view class="divider"></view>
+    <view class="row between">
+      <text class="muted">合计</text>
+      <text class="price">
+        <text class="price-symbol">¥</text>
+        <text>{{queryResult.total}}</text>
+      </text>
+    </view>
+
+    <view class="q-pickup" wx:if="{{queryResult.pickupPoint}}">
+      📍 {{queryResult.pickupPoint.name}} · {{queryResult.pickupPoint.address}}
+    </view>
+
+    <view class="btn btn-primary btn-block" style="margin-top:28rpx;" bindtap="confirmVerify" wx:if="{{queryResult.status !== 'verified' && queryResult.status !== 'cancelled'}}">
+      确认核销
+    </view>
+    <view class="btn btn-ghost btn-block btn-disabled" style="margin-top:28rpx;" wx:else>
+      {{queryResult.status === 'verified' ? '已核销' : '订单已取消'}}
+    </view>
+  </view>
+
+  <!-- 空态提示 -->
+  <view class="tips card" wx:if="{{!queryResult}}">
+    <view class="tip-item">· 核销后订单状态变为「已完成」</view>
+    <view class="tip-item">· 已取消/已核销的码无法重复核销</view>
+    <view class="tip-item">· 扫码支持纯码、带 code 参数的链接</view>
+  </view>
+
+  <view class="page-pad-bottom"></view>
+</view>

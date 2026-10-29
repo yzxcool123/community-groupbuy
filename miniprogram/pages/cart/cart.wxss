@@ -1,0 +1,148 @@
+.page {
+  padding-top: 20rpx;
+  min-height: 100vh;
+}
+
+.list {
+  padding: 0 24rpx;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 12rpx rgba(31, 35, 41, 0.04);
+}
+
+.check {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 2rpx solid #C9CDD4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  flex-shrink: 0;
+  margin-right: 16rpx;
+}
+
+.check.on {
+  background: #FF6700;
+  border-color: #FF6700;
+}
+
+.c-cover {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 12rpx;
+  background: #F2F3F5;
+  flex-shrink: 0;
+}
+
+.c-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 16rpx;
+  padding-right: 28rpx;
+}
+
+.c-title {
+  font-size: 26rpx;
+  color: #1F2329;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.c-spec {
+  font-size: 22rpx;
+  color: #8B919B;
+  background: #F2F3F5;
+  display: inline-block;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+  margin: 10rpx 0 14rpx;
+}
+
+.c-bottom .price {
+  font-size: 28rpx;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  border: 1rpx solid #E5E6EB;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.step-btn {
+  width: 56rpx;
+  height: 52rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #1F2329;
+  background: #FAFBFC;
+}
+
+.step-num {
+  width: 64rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 600;
+  border-left: 1rpx solid #E5E6EB;
+  border-right: 1rpx solid #E5E6EB;
+  height: 52rpx;
+  line-height: 52rpx;
+}
+
+.c-del {
+  position: absolute;
+  right: 16rpx;
+  top: 16rpx;
+  color: #C9CDD4;
+  font-size: 28rpx;
+  padding: 8rpx;
+}
+
+.all-text {
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  color: #1F2329;
+}
+
+.total-box {
+  margin-right: 20rpx;
+  display: flex;
+  align-items: baseline;
+}
+
+.muted {
+  color: #646A73;
+  font-size: 24rpx;
+}
+
+.settle {
+  min-width: 180rpx;
+  height: 64rpx;
+  padding: 0 28rpx;
+  border-radius: 32rpx;
+  font-size: 26rpx;
+}
+
+/* tab 页底栏：不要再叠加 safe-area（tabBar 已处理），压低高度 */
+.footer-bar {
+  padding: 20rpx 24rpx !important;
+  padding-bottom: 20rpx !important;
+}
+
+.footer-bar .btn {
+  height: 64rpx;
+}

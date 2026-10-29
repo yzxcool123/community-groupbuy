@@ -1,0 +1,183 @@
+<view class="page">
+  <!-- 基础信息 -->
+  <view class="section">
+    <view class="sec-title">基础信息</view>
+    <view class="form-item">
+      <text class="form-label">标题</text>
+      <input
+        class="form-input"
+        placeholder="商品标题"
+        placeholder-class="form-placeholder"
+        value="{{form.title}}"
+        data-field="title"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">封面图</text>
+      <input
+        class="form-input"
+        placeholder="图片 URL"
+        placeholder-class="form-placeholder"
+        value="{{form.cover}}"
+        data-field="cover"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item" style="align-items:flex-start;padding-top:20rpx;">
+      <text class="form-label">详情图</text>
+      <textarea
+        class="form-textarea"
+        placeholder="每行一个图片 URL"
+        placeholder-class="form-placeholder"
+        value="{{form.images}}"
+        data-field="images"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item" style="align-items:flex-start;padding-top:20rpx;">
+      <text class="form-label">详情</text>
+      <textarea
+        class="form-textarea"
+        placeholder="商品详情描述"
+        placeholder-class="form-placeholder"
+        value="{{form.detail}}"
+        data-field="detail"
+        bindinput="onInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">分类</text>
+      <picker
+        class="form-input"
+        mode="selector"
+        range="{{categories}}"
+        range-key="name"
+        value="{{categoryIndex}}"
+        bindchange="onCategoryChange"
+      >
+        <view class="picker-val">
+          {{categories.length ? categories[categoryIndex].name : '未分类'}}
+          <text class="picker-arrow">›</text>
+        </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="form-label">销售类型</text>
+      <view class="type-row">
+        <view
+          class="type-chip {{form.saleType === item.key ? 'on' : ''}}"
+          wx:for="{{saleTypes}}"
+          wx:key="key"
+          data-key="{{item.key}}"
+          bindtap="onSaleTypeTap"
+        >
+          {{item.label}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 规格 SKU -->
+  <view class="section">
+    <view class="row between sec-title-row">
+      <view class="sec-title" style="margin-bottom:0;">规格与库存</view>
+      <view class="add-sku" bindtap="addSku">+ 添加规格</view>
+    </view>
+
+    <view class="sku-card" wx:for="{{skus}}" wx:key="index">
+      <view class="row between sku-head">
+        <text class="sku-title">规格 {{index + 1}}</text>
+        <text class="sku-del" data-index="{{index}}" bindtap="removeSku">删除</text>
+      </view>
+      <view class="form-item">
+        <text class="form-label">名称</text>
+        <input
+          class="form-input"
+          placeholder="如：500g"
+          placeholder-class="form-placeholder"
+          value="{{item.name}}"
+          data-index="{{index}}"
+          data-field="name"
+          bindinput="onSkuInput"
+        />
+      </view>
+      <view class="form-item">
+        <text class="form-label">规格</text>
+        <input
+          class="form-input"
+          placeholder="如：特级大果"
+          placeholder-class="form-placeholder"
+          value="{{item.spec}}"
+          data-index="{{index}}"
+          data-field="spec"
+          bindinput="onSkuInput"
+        />
+      </view>
+      <view class="form-item">
+        <text class="form-label">价格</text>
+        <input
+          class="form-input"
+          type="digit"
+          placeholder="0.00"
+          placeholder-class="form-placeholder"
+          value="{{item.price}}"
+          data-index="{{index}}"
+          data-field="price"
+          bindinput="onSkuInput"
+        />
+      </view>
+      <view class="form-item">
+        <text class="form-label">划线价</text>
+        <input
+          class="form-input"
+          type="digit"
+          placeholder="选填"
+          placeholder-class="form-placeholder"
+          value="{{item.linePrice}}"
+          data-index="{{index}}"
+          data-field="linePrice"
+          bindinput="onSkuInput"
+        />
+      </view>
+      <view class="form-item" style="border-bottom:none;">
+        <text class="form-label">库存</text>
+        <input
+          class="form-input"
+          type="number"
+          placeholder="0"
+          placeholder-class="form-placeholder"
+          value="{{item.stock}}"
+          data-index="{{index}}"
+          data-field="stock"
+          bindinput="onSkuInput"
+        />
+      </view>
+    </view>
+  </view>
+
+  <!-- 状态 -->
+  <view class="section">
+    <view class="sec-title">状态</view>
+    <view class="form-item">
+      <text class="form-label">上架</text>
+      <switch checked="{{form.status === 'on'}}" color="#FF6700" bindchange="onStatusChange" />
+    </view>
+    <view class="form-item">
+      <text class="form-label">热销</text>
+      <switch checked="{{form.isHot}}" color="#FF6700" bindchange="onHotChange" />
+    </view>
+    <view class="form-item" style="border-bottom:none;">
+      <text class="form-label">仅自提</text>
+      <switch checked="{{form.pickupOnly}}" color="#FF6700" bindchange="onPickupChange" />
+    </view>
+  </view>
+
+  <view class="page-pad-bottom" style="height:180rpx;"></view>
+
+  <view class="footer-bar {{barReady ? 'footer-bar--show' : ''}}">
+    <view class="btn btn-primary btn-block {{saving ? 'btn-disabled' : ''}}" bindtap="save">
+      {{saving ? '保存中…' : '保存商品'}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,219 @@
+.page {
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+}
+
+.block-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #1F2329;
+  margin-bottom: 20rpx;
+}
+
+/* 履约方式 */
+.fulfill-tabs {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.fulfill-tab {
+  flex: 1;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12rpx;
+  background: #F2F3F5;
+  color: #646A73;
+  font-size: 26rpx;
+  border: 2rpx solid transparent;
+}
+
+.fulfill-tab.on {
+  background: rgba(255, 103, 0, 0.1);
+  color: #FF6700;
+  border-color: #FF6700;
+  font-weight: 600;
+}
+
+/* 送货地址 */
+.addr-form {
+  border-radius: 12rpx;
+  background: #FAFBFC;
+  padding: 8rpx 20rpx;
+}
+
+.addr-row {
+  display: flex;
+  align-items: center;
+  min-height: 84rpx;
+  border-bottom: 1rpx solid #EEF0F2;
+}
+
+.addr-row:last-child {
+  border-bottom: none;
+}
+
+.addr-label {
+  width: 120rpx;
+  font-size: 26rpx;
+  color: #646A73;
+  flex-shrink: 0;
+}
+
+.addr-input {
+  flex: 1;
+  height: 84rpx;
+  font-size: 28rpx;
+  color: #1F2329;
+}
+
+/* 地址选择 */
+.addr-pick {
+  display: flex;
+  align-items: flex-start;
+}
+
+.addr-empty {
+  padding: 28rpx 0;
+  text-align: center;
+}
+
+.addr-empty-text {
+  font-size: 24rpx;
+  color: #8B919B;
+  margin-bottom: 16rpx;
+}
+
+.addr-link {
+  margin-top: 16rpx;
+  text-align: right;
+  font-size: 22rpx;
+  color: #FF6700;
+}
+
+.pay-note {
+  font-size: 24rpx;
+  color: #646A73;
+  background: #F7F9FA;
+  border-radius: 12rpx;
+  padding: 16rpx 20rpx;
+}
+
+.pickup-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.pickup-icon {
+  font-size: 36rpx;
+  margin-right: 12rpx;
+  margin-top: 4rpx;
+}
+
+.pickup-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1F2329;
+}
+
+.pickup-addr {
+  font-size: 24rpx;
+  color: #646A73;
+  margin-top: 8rpx;
+  line-height: 1.5;
+}
+
+.pickup-meta {
+  font-size: 22rpx;
+  color: #8B919B;
+  margin-top: 6rpx;
+}
+
+.change {
+  color: #FF6700;
+  font-size: 24rpx;
+  flex-shrink: 0;
+  margin-left: 16rpx;
+  margin-top: 6rpx;
+}
+
+.pickup-empty {
+  color: #8B919B;
+  padding: 20rpx 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #F0F1F3;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.o-cover {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 12rpx;
+  background: #F2F3F5;
+  flex-shrink: 0;
+}
+
+.o-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 16rpx;
+}
+
+.o-title {
+  font-size: 26rpx;
+  color: #1F2329;
+  font-weight: 500;
+}
+
+.o-spec {
+  font-size: 22rpx;
+  color: #8B919B;
+  margin-top: 8rpx;
+}
+
+.o-right {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 16rpx;
+}
+
+.o-qty {
+  font-size: 22rpx;
+  color: #8B919B;
+  margin-top: 8rpx;
+}
+
+.remark {
+  width: 100%;
+  height: 140rpx;
+  background: #F7F8FA;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 26rpx;
+  color: #1F2329;
+}
+
+.amount-row {
+  padding: 10rpx 0;
+}
+
+.muted {
+  color: #646A73;
+  font-size: 26rpx;
+}
+
+.submit {
+  min-width: 260rpx;
+  height: 76rpx;
+}

@@ -1,0 +1,72 @@
+<view class="page">
+  <!-- 今日热销 -->
+  <view class="section" wx:if="{{hotList.length}}">
+    <view class="section-head">
+      <view class="section-title">🔥 今日热销</view>
+      <view class="section-more" bindtap="goCategory">查看全部 ›</view>
+    </view>
+    <scroll-view scroll-x class="hot-scroll" enhanced show-scrollbar="{{false}}">
+      <view class="hot-list">
+        <view
+          class="hot-item"
+          wx:for="{{hotList}}"
+          wx:key="id"
+          data-id="{{item.id}}"
+          bindtap="onProductTap"
+        >
+          <image class="hot-cover" src="{{item.cover}}" mode="aspectFill" />
+          <view class="hot-title ellipsis-2">{{item.title}}</view>
+          <view class="row between">
+            <view class="price">
+              <text class="price-symbol">¥</text>
+              <text>{{item.activityPrice != null ? item.activityPrice : item.minPrice}}</text>
+            </view>
+            <view class="badge badge-danger">{{item.todaySales > 0 ? '今日售' + item.todaySales : '热销'}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 团购优选 -->
+  <view class="section">
+    <view class="section-head">
+      <view class="section-title">🥬 团购优选</view>
+    </view>
+    <view class="goods-grid">
+      <view
+        class="goods-card"
+        wx:for="{{allList}}"
+        wx:key="id"
+        data-id="{{item.id}}"
+        bindtap="onProductTap"
+      >
+        <image class="goods-cover" src="{{item.cover}}" mode="aspectFill" />
+        <view class="goods-body">
+          <view class="goods-title ellipsis-2">{{item.title}}</view>
+          <view class="goods-tags">
+            <text class="badge badge-primary" wx:if="{{item.activityPrice != null}}">活动价</text>
+            <text class="badge badge-warning" wx:if="{{item.saleType === 'presale'}}">预售</text>
+            <text class="badge badge-info" wx:if="{{item.pickupOnly}}">自提</text>
+          </view>
+          <view class="row between goods-bottom">
+            <view>
+              <text class="price">
+                <text class="price-symbol">¥</text>
+                <text>{{item.activityPrice != null ? item.activityPrice : item.minPrice}}</text>
+              </text>
+              <text class="price-origin" wx:if="{{item.activityPrice != null}}">¥{{item.minPrice}}</text>
+            </view>
+            <view class="buy-dot">购</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="loading-wrap" wx:if="{{loading}}">
+    <text>加载中…</text>
+  </view>
+
+  <view class="page-foot">— 已经到底啦 —</view>
+</view>

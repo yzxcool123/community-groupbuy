@@ -1,0 +1,120 @@
+<view class="page" wx:if="{{product}}">
+  <!-- 轮播 -->
+  <swiper class="gallery" circular indicator-dots="{{images.length > 1}}" indicator-active-color="#FFFFFF">
+    <swiper-item wx:for="{{images}}" wx:key="*this">
+      <image class="gallery-img" src="{{item}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+
+  <!-- 价格区 -->
+  <view class="price-card">
+    <view class="row between">
+      <view class="row price-row">
+        <text class="price">
+          <text class="price-symbol">¥</text>
+          <text class="price-num">{{displayPrice}}</text>
+        </text>
+        <text class="price-origin" wx:if="{{displayLinePrice}}">¥{{displayLinePrice}}</text>
+        <text class="badge badge-danger" wx:if="{{product.activityPrice != null}}">限时活动</text>
+      </view>
+      <view class="share muted">自提免运费</view>
+    </view>
+    <view class="p-title">{{product.title}}</view>
+    <view class="p-tags">
+      <text class="badge badge-primary" wx:if="{{product.isHot}}">热销</text>
+      <text class="badge badge-warning" wx:if="{{product.saleType === 'presale'}}">预售</text>
+      <text class="badge badge-info" wx:if="{{product.pickupOnly}}">到店自提</text>
+      <text class="badge badge-muted">{{product.categoryName}}</text>
+    </view>
+  </view>
+
+  <!-- 规格 -->
+  <view class="card spec-card" bindtap="openSku" data-type="cart">
+    <view class="row between">
+      <view>
+        <view class="spec-label">已选</view>
+        <view class="spec-value">
+          {{product.skus.length ? product.skus[selectedSkuIndex].name + (product.skus[selectedSkuIndex].spec ? ' / ' + product.skus[selectedSkuIndex].spec : '') : '默认'}}，{{buyQty}}件
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 详情 -->
+  <view class="card">
+    <view class="detail-head">商品详情</view>
+    <text class="detail-text">{{product.detail || product.title}}</text>
+  </view>
+
+  <view class="page-pad-bottom"></view>
+
+  <!-- 底部操作 -->
+  <view class="footer-bar {{barReady ? 'footer-bar--show' : ''}}">
+    <view class="foot-icon" bindtap="goCart">
+      <text class="foot-emoji">🛒</text>
+      <text class="foot-text">购物车</text>
+      <view class="cart-badge" wx:if="{{cartCount}}">{{cartCount > 99 ? '99+' : cartCount}}</view>
+    </view>
+    <view class="btn btn-outline foot-btn" bindtap="openSku" data-type="cart">加入购物车</view>
+    <view class="btn btn-primary foot-btn" bindtap="openSku" data-type="buy">立即购买</view>
+  </view>
+
+  <!-- SKU 弹层 -->
+  <view class="sku-mask" wx:if="{{showSku}}" bindtap="closeSku">
+    <view class="sku-panel" catchtap="noop">
+      <view class="sku-top">
+        <image class="sku-cover" src="{{product.cover}}" mode="aspectFill" />
+        <view class="sku-top-info">
+          <view class="price">
+            <text class="price-symbol">¥</text>
+            <text style="font-size:40rpx;">{{displayPrice}}</text>
+          </view>
+          <view class="muted sku-stock">库存 {{product.skus[selectedSkuIndex].stock}}</view>
+          <view class="sku-sel">已选：{{product.skus[selectedSkuIndex].name}}</view>
+        </view>
+        <view class="sku-close" bindtap="closeSku">✕</view>
+      </view>
+
+      <view class="sku-section">
+        <view class="sku-section-title">规格</view>
+        <view class="sku-list">
+          <view
+            class="sku-chip {{selectedSkuIndex === index ? 'on' : ''}} {{item.stock <= 0 ? 'disabled' : ''}}"
+            wx:for="{{product.skus}}"
+            wx:key="id"
+            data-index="{{index}}"
+            bindtap="onSkuSelect"
+          >
+            <text>{{item.name}}</text>
+            <text class="sku-spec" wx:if="{{item.spec}}">{{item.spec}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="sku-section row between">
+        <view class="sku-section-title">数量</view>
+        <view class="stepper">
+          <view class="step-btn" bindtap="onQtyMinus">−</view>
+          <view class="step-num">{{buyQty}}</view>
+          <view class="step-btn" bindtap="onQtyPlus">+</view>
+        </view>
+      </view>
+
+      <view class="sku-actions">
+        <view class="btn btn-primary btn-block" bindtap="confirmSku">
+          {{actionType === 'buy' ? '立即购买' : '加入购物车'}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="loading-wrap" wx:elif="{{loading}}">
+  <text>加载中…</text>
+</view>
+
+<view class="empty" wx:else>
+  <view class="empty-icon">😕</view>
+  <view class="empty-text">商品不存在或已下架</view>
+</view>

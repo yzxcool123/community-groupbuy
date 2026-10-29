@@ -1,0 +1,153 @@
+<view class="page">
+  <!-- 履约方式 -->
+  <view class="card">
+    <view class="block-title">履约方式</view>
+    <view class="fulfill-tabs">
+      <view
+        class="fulfill-tab {{fulfillment === 'pickup' ? 'on' : ''}}"
+        data-type="pickup"
+        bindtap="onFulfillChange"
+      >到店自提</view>
+      <view
+        class="fulfill-tab {{fulfillment === 'delivery' ? 'on' : ''}}"
+        data-type="delivery"
+        bindtap="onFulfillChange"
+      >送货上门</view>
+    </view>
+
+    <!-- 自提点 -->
+    <block wx:if="{{fulfillment === 'pickup'}}">
+      <picker
+        mode="selector"
+        range="{{pickupPoints}}"
+        range-key="name"
+        value="{{pickupIndex}}"
+        bindchange="onPickupChange"
+      >
+        <view class="pickup-row" wx:if="{{pickupPoints.length}}">
+          <view class="pickup-icon">📍</view>
+          <view class="flex-1">
+            <view class="pickup-name">{{pickupPoints[pickupIndex].name}}</view>
+            <view class="pickup-addr">{{pickupPoints[pickupIndex].address}}</view>
+            <view class="pickup-meta" wx:if="{{pickupPoints[pickupIndex].openTime}}">营业时间 {{pickupPoints[pickupIndex].openTime}}</view>
+          </view>
+          <view class="change">切换 ›</view>
+        </view>
+        <view class="pickup-empty" wx:else>暂无自提点</view>
+      </picker>
+    </block>
+
+    <!-- 送货：选择已保存地址 -->
+    <block wx:else>
+      <view class="addr-pick" wx:if="{{selectedAddress}}" bindtap="onChangeAddress">
+        <view class="pickup-icon">🚚</view>
+        <view class="flex-1">
+          <view class="pickup-name">{{selectedAddress.community}} · {{selectedAddress.building}}</view>
+          <view class="pickup-addr">{{selectedAddress.room}}</view>
+          <view class="pickup-meta">{{selectedAddress.contactName}} · {{selectedAddress.contactPhone}}</view>
+        </view>
+        <view class="change">切换 ›</view>
+      </view>
+
+      <view class="addr-empty" wx:else>
+        <view class="addr-empty-text">请先在地址管理中添加收货地址</view>
+        <view class="btn btn-primary btn-sm" bindtap="goAddressManage">去添加地址</view>
+      </view>
+
+      <view class="addr-link" bindtap="goAddressManage">地址管理 ›</view>
+    </block>
+  </view>
+
+  <!-- 付款方式 -->
+  <view class="card">
+    <view class="block-title">付款方式</view>
+    <view class="fulfill-tabs" wx:if="{{fulfillment === 'pickup'}}">
+      <view
+        class="fulfill-tab {{payMode === 'online' ? 'on' : ''}}"
+        data-type="online"
+        bindtap="onPayModeChange"
+      >提前支付</view>
+      <view
+        class="fulfill-tab {{payMode === 'cod' ? 'on' : ''}}"
+        data-type="cod"
+        bindtap="onPayModeChange"
+      >到店付款</view>
+    </view>
+    <view class="pay-note" wx:if="{{fulfillment === 'delivery'}}">
+      🚚 送货上门需先在线支付货款
+    </view>
+    <view class="pay-note" wx:elif="{{payMode === 'cod'}}">
+      🏪 到店取货时付款，核销时由店员收款
+    </view>
+    <view class="pay-note" wx:else>
+      💳 提交订单后在线支付，支持模拟支付
+    </view>
+  </view>
+
+  <!-- 商品 -->
+  <view class="card">
+    <view class="block-title">商品清单（{{totalCount}}）</view>
+    <view class="order-item" wx:for="{{items}}" wx:key="skuId">
+      <image class="o-cover" src="{{item.cover}}" mode="aspectFill" />
+      <view class="o-info">
+        <view class="o-title ellipsis">{{item.title}}</view>
+        <view class="o-spec">{{item.skuName}}{{item.skuSpec ? ' · ' + item.skuSpec : ''}}</view>
+      </view>
+      <view class="o-right">
+        <view class="price">
+          <text class="price-symbol">¥</text>
+          <text>{{item.price}}</text>
+        </view>
+        <view class="o-qty">x{{item.qty}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 备注 -->
+  <view class="card">
+    <view class="block-title">订单备注</view>
+    <textarea
+      class="remark"
+      placeholder="选填，如取货时间偏好、口味要求等"
+      placeholder-class="form-placeholder"
+      maxlength="120"
+      value="{{remark}}"
+      bindinput="onRemarkInput"
+    />
+  </view>
+
+  <!-- 金额 -->
+  <view class="card">
+    <view class="row between amount-row">
+      <text class="muted">商品金额</text>
+      <text class="price">¥{{totalAmount}}</text>
+    </view>
+    <view class="row between amount-row">
+      <text class="muted">配送方式</text>
+      <text class="text-primary">{{fulfillment === 'delivery' ? '送货上门' : '到店自提'}} · 免运费</text>
+    </view>
+    <view class="divider"></view>
+    <view class="row between">
+      <text style="font-weight:600;">应付总额</text>
+      <text class="price" style="font-size:40rpx;">
+        <text class="price-symbol">¥</text>
+        <text>{{totalAmount}}</text>
+      </text>
+    </view>
+  </view>
+
+  <view class="page-pad-bottom" style="height:180rpx;"></view>
+
+  <view class="footer-bar {{barReady ? 'footer-bar--show' : ''}}">
+    <view class="flex-1">
+      <view class="muted">合计</view>
+      <view class="price" style="font-size:36rpx;">
+        <text class="price-symbol">¥</text>
+        <text>{{totalAmount}}</text>
+      </view>
+    </view>
+    <view class="btn btn-primary submit {{canSubmit ? '' : 'btn-disabled'}}" bindtap="submit">
+      {{submitting ? '提交中…' : '提交订单'}}
+    </view>
+  </view>
+</view>

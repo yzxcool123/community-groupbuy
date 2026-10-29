@@ -1,0 +1,141 @@
+.page {
+padding-bottom: 40rpx;
+}
+
+/* 区块 */
+.section {
+  margin-top: 8rpx;
+}
+
+.section:first-child {
+  margin-top: 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 32rpx 12rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #1F2329;
+}
+
+.section-more {
+  font-size: 24rpx;
+  color: #646A73;
+}
+
+/* 热销横滑 */
+.hot-scroll {
+  padding: 0 24rpx;
+  white-space: nowrap;
+}
+
+.hot-list {
+  display: inline-flex;
+  padding-bottom: 8rpx;
+}
+
+.hot-item {
+  width: 240rpx;
+  margin-right: 16rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  overflow: hidden;
+  padding-bottom: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(31, 35, 41, 0.04);
+  vertical-align: top;
+  white-space: normal;
+}
+
+.hot-cover {
+  width: 240rpx;
+  height: 240rpx;
+  display: block;
+  background: #F2F3F5;
+}
+
+.hot-title {
+  font-size: 24rpx;
+  color: #1F2329;
+  padding: 12rpx 12rpx 8rpx;
+  height: 72rpx;
+}
+
+.hot-item .row {
+  padding: 0 12rpx;
+}
+
+.hot-item .price {
+  font-size: 28rpx;
+}
+
+/* 双列商品 */
+.goods-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16rpx;
+}
+
+.goods-card {
+  width: calc(50% - 16rpx);
+  margin: 8rpx 8rpx 16rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 12rpx rgba(31, 35, 41, 0.04);
+}
+
+.goods-cover {
+  width: 100%;
+  height: 340rpx;
+  display: block;
+  background: #F2F3F5;
+}
+
+.goods-body {
+  padding: 16rpx 18rpx 18rpx;
+}
+
+.goods-title {
+  font-size: 26rpx;
+  color: #1F2329;
+  line-height: 1.4;
+  height: 72rpx;
+  margin-bottom: 10rpx;
+}
+
+.goods-tags {
+  display: flex;
+  gap: 8rpx;
+  margin-bottom: 12rpx;
+  min-height: 36rpx;
+}
+
+.goods-bottom .price {
+  font-size: 32rpx;
+}
+
+.buy-dot {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6700, #E85D00);
+  color: #FFFFFF;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.page-foot {
+  text-align: center;
+  color: #B0B6BF;
+  font-size: 22rpx;
+  padding: 32rpx 0 48rpx;
+}

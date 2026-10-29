@@ -1,0 +1,165 @@
+.page {
+display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #F7F8FA;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 24rpx;
+  background: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 68rpx;
+  background: #F2F3F5;
+  border-radius: 16rpx;
+  padding: 0 24rpx;
+}
+
+.s-icon {
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+
+.s-input {
+  flex: 1;
+  height: 68rpx;
+  font-size: 26rpx;
+}
+
+.s-clear {
+  color: #B0B6BF;
+  font-size: 28rpx;
+  width: 56rpx;
+  height: 56rpx;
+  margin-right: -12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.s-btn {
+  margin-left: 16rpx;
+  color: #FF6700;
+  font-size: 28rpx;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.side {
+  width: 180rpx;
+  height: 100%;
+  background: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.side-item {
+  position: relative;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12rpx;
+}
+
+.side-item.active {
+  background: #F7F8FA;
+}
+
+.side-item.active .side-name {
+  color: #FF6700;
+  font-weight: 600;
+}
+
+.side-indicator {
+  position: absolute;
+  left: 0;
+  top: 28rpx;
+  width: 6rpx;
+  height: 40rpx;
+  border-radius: 0 6rpx 6rpx 0;
+  background: #FF6700;
+}
+
+.side-name {
+  font-size: 26rpx;
+  color: #646A73;
+  text-align: center;
+}
+
+.main {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+}
+
+.main-inner {
+  padding: 16rpx 16rpx 40rpx;
+}
+
+.goods-item {
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.g-cover {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 12rpx;
+  flex-shrink: 0;
+  background: #F2F3F5;
+}
+
+.g-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.g-title {
+  font-size: 26rpx;
+  color: #1F2329;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.g-tags {
+  display: flex;
+  gap: 8rpx;
+  margin: 8rpx 0;
+}
+
+.g-bottom .price {
+  font-size: 30rpx;
+}
+
+.g-go {
+  background: #FF6700;
+  color: #FFFFFF;
+  font-size: 22rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 22rpx;
+}
