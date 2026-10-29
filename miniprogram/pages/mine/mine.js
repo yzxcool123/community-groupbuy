@@ -1,5 +1,6 @@
 const auth = require('../../utils/auth');
 const permission = require('../../utils/permission');
+const appConfig = require('../../config');
 
 const app = getApp();
 
@@ -95,7 +96,7 @@ Page({
   goAbout() {
     wx.showModal({
       title: '社区团购',
-      content: '预售 + 自提 社区团购 MVP\n后端 API: 127.0.0.1:3000',
+      content: '预售 + 自提 社区团购 MVP\n后端 API: ' + appConfig.BASE_URL,
       showCancel: false,
     });
   },

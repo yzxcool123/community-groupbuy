@@ -194,7 +194,9 @@ Page(attachBarReady({
             '&orderNo=' +
             encodeURIComponent(order.orderNo || '') +
             '&payMode=' +
-            (order.payMode || payload.payMode),
+            (order.payMode || payload.payMode) +
+            '&fulfillment=' +
+            (order.fulfillment || payload.fulfillment || 'pickup'),
         });
       })
       .catch(() => {

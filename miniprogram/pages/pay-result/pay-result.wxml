@@ -2,24 +2,24 @@
   <!-- 成功 -->
   <view class="result-wrap" wx:if="{{status === 'success'}}">
     <view class="icon-circle success">✓</view>
-    <view class="result-title">支付成功</view>
+    <view class="result-title">{{resultTitle}}</view>
     <view class="result-sub">{{payMsg}}</view>
     <view class="order-no" wx:if="{{orderNo}}">订单号：{{orderNo}}</view>
 
     <view class="result-card">
       <view class="rc-row">
         <text class="rc-label">订单状态</text>
-        <text class="badge badge-primary">待提货</text>
+        <text class="badge badge-primary">{{statusBadgeText}}</text>
       </view>
       <view class="rc-row">
-        <text class="rc-label">提货方式</text>
-        <text class="rc-val">到店自提</text>
+        <text class="rc-label">履约方式</text>
+        <text class="rc-val">{{fulfillmentText}}</text>
       </view>
-      <view class="rc-tip">凭订单核销码到所选自提点取货</view>
+      <view class="rc-tip">{{cardTip}}</view>
     </view>
 
     <view class="btns">
-      <view class="btn btn-primary btn-block" bindtap="goVerifyCode">查看核销码</view>
+      <view class="btn btn-primary btn-block" wx:if="{{showVerifyCodeBtn}}" bindtap="goVerifyCode">查看核销码</view>
       <view class="btn btn-outline btn-block" bindtap="goOrderDetail">查看订单</view>
       <view class="btn btn-ghost btn-block" bindtap="goHome">返回首页</view>
     </view>
