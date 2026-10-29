@@ -83,7 +83,7 @@ Page(attachBarReady({
   },
 
   onPay() {
-    post('/api/orders/' + this.data.id + '/mock-pay', { loading: true })
+    post('/api/orders/' + this.data.id + '/mock-pay', {}, { loading: true })
       .then(() => {
         wx.showToast({ title: '支付成功', icon: 'success' });
         this.fetch();
@@ -97,7 +97,7 @@ Page(attachBarReady({
       content: '确定取消该订单吗？',
       success: (res) => {
         if (res.confirm) {
-          post('/api/orders/' + this.data.id + '/cancel', { loading: true })
+          post('/api/orders/' + this.data.id + '/cancel', {}, { loading: true })
             .then(() => {
               wx.showToast({ title: '已取消', icon: 'success' });
               this.fetch();

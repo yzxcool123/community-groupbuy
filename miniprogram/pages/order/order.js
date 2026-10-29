@@ -114,7 +114,7 @@ Page({
 
   onPay(e) {
     const id = e.currentTarget.dataset.id;
-    post('/api/orders/' + id + '/mock-pay', { loading: true })
+    post('/api/orders/' + id + '/mock-pay', {}, { loading: true })
       .then(() => {
         wx.showToast({ title: '支付成功', icon: 'success' });
         this.load();
@@ -129,7 +129,7 @@ Page({
       content: '确定取消该订单吗？库存将回滚。',
       success: (res) => {
         if (res.confirm) {
-          post('/api/orders/' + id + '/cancel', { loading: true })
+          post('/api/orders/' + id + '/cancel', {}, { loading: true })
             .then(() => {
               wx.showToast({ title: '已取消', icon: 'success' });
               this.load();
